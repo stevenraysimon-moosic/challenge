@@ -1,0 +1,382 @@
+*{
+   padding: 0;
+   margin: 0;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   box-sizing: border-box;
+}
+
+/********** Font Load *************/
+
+@font-face {
+  font-family: Avenir-Roman;
+  src: url(../fonts/avenir/AvenirLTStd-Roman.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Avenir-Medium;
+  src: url(../fonts/avenir/AvenirLTStd-Medium.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Avenir-Book;
+  src: url(../fonts/avenir/AvenirLTStd-Book.otf);
+  font-weight: bold;
+}
+
+/********** Fade in *************/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/********** Slideshow ***********/
+
+#slideGroup img{
+   position: absolute;
+    display: block;
+    width: 100%;
+   top: 0; 
+   left: 0;
+}
+
+#slideGroup{
+    position: relative;
+    max-height: 380px;
+    
+     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;
+}
+
+.slideshow{
+    position: relative;
+    
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;
+}
+
+.slideshow img{
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 0;
+    top:0;
+    left: 0;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+/********** Main ***********/
+
+body{
+  font-family: 'Avenir-Book', Arial, sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0px 40px;
+}
+
+header{
+  padding: 150px 0px;
+/*height: 100vh;
+  min-height: 500px;
+  display: flex;*/
+}
+
+main{
+  background-color: #282a2b;
+  color: white;
+}
+
+/********** Flexbox ***********/
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex > div, .flex > img{
+  width: 50%;
+}
+
+
+#intro{
+  text-align: center;
+    
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+/*** Discount Tire Logo ***/
+#intro img{
+  width: 100%;
+  max-width: 100px;
+}
+
+a{
+  color: #3483DE;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #012855;
+  transition: 0.6s;
+}
+
+h1{
+  text-transform: capitalize;
+  font-size: 3vw;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+main h1, footer h1{
+  padding: 50px 0px;
+}
+
+h5{
+  font-size: 2vw;
+}
+
+#by-line{
+   margin-top: 10px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+#main-cta{
+  margin-top: 50px;
+  display: block;
+  font-size: 1.6vw;
+  text-transform: capitalize;
+}
+
+.red{
+  color: #d92e2d;
+}
+
+#copy{
+  padding: 0px 50px;
+  line-height: 28px;
+}
+
+p{
+  font-size: 1.4vw;
+}
+
+/********** Music ***********/
+
+.playlist{
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+}
+
+.playbar{
+  background-color: white;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.playbar:hover{
+  cursor: pointer;
+  background-color: #ddd;
+  transition: 0.6s;
+}
+
+.playbar:active{
+  background-color: #bbb;
+  transition: 0s;
+}
+
+.playbar p{
+  text-transform: capitalize;
+}
+
+.trackRecords{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.playlist{
+  padding-bottom: 40px;
+}
+
+/********** Contact Form ***********/
+
+.contact-container{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.contact-container form{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-container textarea, .contact-container input{
+    width: 100%;
+    padding: 15px;
+}
+
+#submit{
+        background-color: #d92e2d;
+    color: white;
+    max-width: 150px;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: #AF1218;
+    transition: 0.6s;
+}
+
+/****** Big Screen *********/
+
+@media screen and (min-width: 1400px) {
+  h1 {
+     font-size: 2.5rem;
+  }
+  h5{
+    font-size: 1.5rem;
+  }
+  #main-cta{
+    font-size: 1.4rem;
+  }
+  p{
+    font-size: 1.1rem;
+  }
+}
+
+/******* Mobile *******/
+
+@media screen and (max-width: 900px) {
+
+  #main-cta{
+    font-size: 1.9vw;
+  }
+
+  p{
+    font-size: 1.8vw;
+  }
+}
+
+/******* Mobile *******/
+@media screen and (max-width: 700px) {
+
+  .flex{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex > div, .flex > img{
+    width: 100%;
+  }
+
+  header{
+      padding: 50px 0px;
+      height: 100%;
+      min-height: 0;
+      display: block;
+    }
+
+  #main-cta{
+    margin-top: 30px;
+    display: block;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+  }
+
+  #copy{
+    padding: 30px 0px;
+    line-height: 28px;
+  }
+
+  h1 {
+     font-size: 1.4rem;
+  }
+  h5{
+    font-size: 0.5rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+}
