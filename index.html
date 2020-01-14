@@ -11,6 +11,33 @@
   <noscript>
       <link rel="stylesheet" href="css/noscript.css" type="text/css" />
   </noscript>
+  <script type="text/javascript">
+    function preloader() {
+          if (document.images) {
+            var img1 = new Image();
+            var img2 = new Image();
+            var img3 = new Image();
+
+            img1.src = "images/singer.jpg";
+            img2.src = "images/drummer.jpg";
+            img3.src = "images/soundboard.jpg";
+          }
+        }
+        function addLoadEvent(func) {
+          var oldonload = window.onload;
+          if (typeof window.onload != 'function') {
+            window.onload = func;
+          } else {
+            window.onload = function() {
+              if (oldonload) {
+                oldonload();
+              }
+              func();
+            }
+          }
+        }
+       addLoadEvent(preloader);
+  </script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
