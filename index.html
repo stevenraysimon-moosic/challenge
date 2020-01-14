@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Discount Tire code challenge">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+  <title>Moosic</title>
+  <meta name="viewport"  content="initial-scale=1, width=device-width">
+  <link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <noscript>
+      <link rel="stylesheet" href="css/noscript.css" type="text/css" />
+  </noscript>
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<header>
+  <div class="wrapper">
+    <div class="flex">
+      <div id="intro">
+        <h1>Hello, we're <span class="red">Moosic</span></h1>
+        <h5 id="by-line">by &nbsp;<a href="https://www.discounttire.com/" target="_blank" title="Discount Tire"><img src="images/DT_logo.png"/></a></h5>
+        <a id="main-cta" href="#scroll-to-band" title="Experience our music" onclick="return false;">Experience our music</a>
+      </div><!--intro-->
+        <div class="slideshow">
+            <img id="singer" src="images/singer.jpg"/>
+        </div>
+    </div><!--flex-->
+  </div><!--wrapper-->
+</header>
+<main>
+  <div class="wrapper">
+    <a name="scroll-to-band" id="scroll-to-band"></a>
+    <h1>We're a garage band</h1>
+    <div class="flex">
+      <img id="tires" src="images/tires.jpg"/>
+      <div id="copy">
+        <p>Discount Tire first opened its doors in 1960, when Bruce T. Halle rented an old plumbing supply building on Stadium Boulevard in Ann Arbor, Michigan. Bruce cleaned out the building, built countertops, repainted the sign outside, and displayed his initial six-tire inventory.</p>
+      </div><!--copy-->
+    </div><!--flex-->
+    <h1>Listen to Moosic</h1>
+    <div class="playlist">
+            <div class="trackRecords">
+              <p id="trackNumber"><span id="songTotal">0</span> songs</p>
+              <p id="trackTimes">total time <span id="trackTimeTotal">00:00</span></p>
+            </div><!--track records-->
+            <div class="playbar">
+              <audio preload="metadata"><source src="sounds/push.mp3" type="audio/mpeg"></audio>
+              <i class="fa fa-play"></i>
+              <p>1. Moosic - You don't really love me</p>
+              <p class="songTime"><span>00:00</span></p>
+            </div><!--playbar-->
+            <div class="playbar">
+              <audio preload="metadata"><source src="sounds/3am.mp3" type="audio/mpeg"></audio>
+              <i class="fa fa-play"></i>
+              <p>2. Moosic - So done with you</p>
+              <p class="songTime"><span>00:00</span></p>
+            </div><!--playbar-->
+            <div class="playbar">
+              <audio preload="metadata"><source src="sounds/smallPop.mp3" type="audio/mpeg"></audio>
+              <i class="fa fa-play"></i>
+              <p>3. Moosic - I actually still love you</p>
+              <p class="songTime"><span>00:00</span></p>
+            </div><!--playbar-->
+            <div class="playbar">
+              <audio preload="metadata"><source src="sounds/push.mp3" type="audio/mpeg"></audio>
+              <i class="fa fa-play"></i>
+              <p>4. Moosic - Next</p>
+              <p class="songTime"><span>00:00</span></p>
+            </div><!--playbar-->
+    </div><!--playlist-wrapper-->
+  </div><!--wrapper-->
+</main>
+<footer>
+  <div class="wrapper">
+    <h1>Say hello</h1>
+       <div class="contact-container">
+          <form action="">
+            <label for="fname">Name</label><br/>
+            <input type="text" id="name" name="firstname" placeholder="Name"><br/>
+            <br/>
+            <label for="subject">Comment</label><br/>
+            <textarea id="comment" name="subject" placeholder="Write something.."></textarea><br/>
+
+            <input type="submit" value="Submit" id="submit">
+          </form>
+        </div><!--contact-container-->
+  </div><!--wrapper-->
+</footer>
+</body>
+</html>
