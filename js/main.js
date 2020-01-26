@@ -83,7 +83,6 @@ document.getElementById("songTotal").innerHTML = playlist.getElementsByTagName('
 var audios;
 var icons;
 var songTimes;
-var songTitles;
 var minutes;
 var seconds;
 var currentlyPlaying = false;
@@ -114,8 +113,7 @@ for (var i = 0; i < playbars.length; i++){
   }
   
   //Dynamically set ids for song titles
-  songTitles = playbars[i].getElementsByTagName('p')[0];
-  songTitles[i].setAttribute("id", "songTitle"+i);
+  playbars[i].getElementsByTagName('p')[0].setAttribute("id", "songTitle"+i);
 
 }//playbars loop
 
