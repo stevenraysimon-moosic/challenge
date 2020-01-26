@@ -107,10 +107,7 @@ for (var i = 0; i < playbars.length; i++){
   }
 
   //Dynamically set ids for icons
-  icons = playbars[i].getElementsByTagName('i');
-  for(var c = 0; c < icons.length; c++){
-    icons[c].setAttribute("id", "icon"+i);
-  }
+  playbars[i].getElementsByTagName('i')[0].setAttribute("id", "icon"+i);
   
   //Dynamically set ids for song titles
   playbars[i].getElementsByTagName('p')[0].setAttribute("id", "songTitle"+i);
@@ -128,6 +125,7 @@ function duration(v)
         var minutes = parseInt(audio.duration / 60, 10);
         var seconds = parseInt(audio.duration % 60);
         document.getElementById("song"+v).innerHTML = minutes+":"+seconds;
+        document.getElementById("songTitle"+v).innerHTML = audio.name;
 
         //Calculate total song duration
         totalDuration = totalDuration + audio.duration;
