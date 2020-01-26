@@ -32,7 +32,6 @@ function ScrollToBand() {
 //Slideshow
 var seconds = 3;
 document.querySelector('.slideshow').style.display = 'none';
-//document.querySelector('.slideshow').style.display = 'none';
  var x = document.body.querySelectorAll('.slideshow');
  var index = 0;
  for( index=0; index < x.length; index++ ) { 
@@ -84,6 +83,7 @@ document.getElementById("songTotal").innerHTML = playlist.getElementsByTagName('
 var audios;
 var icons;
 var songTimes;
+var songTitles;
 var minutes;
 var seconds;
 var currentlyPlaying = false;
@@ -111,6 +111,12 @@ for (var i = 0; i < playbars.length; i++){
   icons = playbars[i].getElementsByTagName('i');
   for(var c = 0; c < icons.length; c++){
     icons[c].setAttribute("id", "icon"+i);
+  }
+  
+  //Dynamically set ids for song titles
+  songTitles = playbars[i].querySelector('.songTitle');
+  for(var t = 0; t < songTitles.length; t++){
+    songTitles[t].setAttribute("id", "songTitle"+t);
   }
 
 }//playbars loop
