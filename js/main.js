@@ -80,9 +80,6 @@ document.getElementById("songTotal").innerHTML = playlist.getElementsByTagName('
 
 
 //Dynamically set ids for content
-var audios;
-var icons;
-var songTimes;
 var minutes;
 var seconds;
 var currentlyPlaying = false;
@@ -95,16 +92,10 @@ for (var i = 0; i < playbars.length; i++){
   playbars[i].setAttribute("id", "playbar"+i);
 
   //Dynamically set ids for songs
-  songTimes = playbars[i].getElementsByTagName('span');
-  for(var s = 0; s < songTimes.length; s++){
-    songTimes[s].setAttribute("id", "song"+i);
-  }
+  playbars[i].getElementsByTagName('span')[0].setAttribute("id", "song"+i);
 
   //Dynamically set ids for audio
-  audios = playbars[i].getElementsByTagName('audio');
-  for(var a = 0; a < audios.length; a++){
-    audios[a].setAttribute("id", "aud"+i);
-  }
+  playbars[i].getElementsByTagName('audio')[0].setAttribute("id", "aud"+i);
 
   //Dynamically set ids for icons
   playbars[i].getElementsByTagName('i')[0].setAttribute("id", "icon"+i);
