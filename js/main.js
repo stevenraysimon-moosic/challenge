@@ -114,7 +114,7 @@ for (var i = 0; i < playbars.length; i++){
   }
   
   //Dynamically set ids for song titles
-  songTitles = playbars[i].querySelector('p');
+  songTitles = playbars[i].querySelector('p')[0];
   for(var t = 0; t < songTitles.length; t++){
     songTitles[t].setAttribute("id", "songTitle"+t);
   }
