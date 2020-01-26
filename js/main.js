@@ -116,7 +116,7 @@ function duration(v)
         var minutes = parseInt(audio.duration / 60, 10);
         var seconds = parseInt(audio.duration % 60);
         document.getElementById("song"+v).innerHTML = minutes+":"+seconds;
-        document.getElementById("songTitle"+v).innerHTML = v+'. Casper';
+        document.getElementById("songTitle"+v).innerHTML = (v+1)+'. Casper';
 
         //Calculate total song duration
         totalDuration = totalDuration + audio.duration;
